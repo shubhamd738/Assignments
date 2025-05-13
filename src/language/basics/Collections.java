@@ -30,7 +30,7 @@ public class Collections
 	          					/********LinkedList********/
 	System.out.println("********LinkedList********");
 	
-	List<>
+
 	
 	
 	
