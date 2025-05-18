@@ -15,6 +15,7 @@ public class Assignment_8
 		int totalAmountCredit=0;
 		int totalAmountDebit=0;
 		int suspiciousTras=0;
+		int finalBalance=0;
 		for(int number:transaction)
 		{
 			if(number>0) 
@@ -39,23 +40,26 @@ public class Assignment_8
 					totalAmountDebit+=number1;
 					
 				}
+				finalBalance=totalAmountCredit+totalAmountDebit;
 				if(number1>10000) 
 				{
+					System.out.println("Suspicious Credit Transaction:" +number1);
 					suspiciousTras++;
+					
 				}
 				if(number1<-10000) 
 				{
-					
+					System.out.println("Suspicious Debit Transaction:" +number1);
 					suspiciousTras++;
 				}
 				
 			}
-			System.out.println(totalNumberCredit);//3
-			System.out.println(totalNumberDebit);//5
-			System.out.println(totalAmountCredit);//57000
-			System.out.println(totalAmountDebit);//-20500
-			System.out.println(totalAmountCredit+totalAmountDebit);//36500
-			System.out.println(suspiciousTras);//2
+			System.out.println("Total Number of Credit: "+totalNumberCredit);//3
+			System.out.println("Total Number of Credit: "+totalNumberDebit);//5
+			System.out.println("Total Amount Credit: "+totalAmountCredit);//57000
+			System.out.println("Total Amount Debit: "+totalAmountDebit);//-20500
+			System.out.println("Remaining Balance in Account: "+finalBalance);
+			System.out.println("Number of suspicious transaction:" +suspiciousTras);//2
 			
 			
 			
